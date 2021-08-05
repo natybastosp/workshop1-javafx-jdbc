@@ -11,7 +11,7 @@ import com.educandoweb.course.entities.Order;
 import com.educandoweb.course.entities.Product;
 
 @Embeddable
-public class OrdemItemPk implements Serializable {
+public class OrderItemPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@ManyToOne
@@ -47,7 +47,7 @@ public class OrdemItemPk implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		OrdemItemPk other = (OrdemItemPk) obj;
+		OrderItemPK other = (OrderItemPK) obj;
 		return Objects.equals(order, other.order) && Objects.equals(product, other.product);
 	}
 
